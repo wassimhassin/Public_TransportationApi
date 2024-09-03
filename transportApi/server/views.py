@@ -12,7 +12,6 @@ from rest_framework import generics
 from rest_framework import filters
 from trainapp.serializers import TrainSerializer
 
-
 ####    Users logique    ####
 @api_view(['POST'])
 def signup(request):
@@ -306,8 +305,6 @@ def delete_bus(request, bus_id):
     bus.delete()
     return Response(status=status.HTTP_204_NO_CONTENT)
 
-
-
 ####   Bus Comment logique    ####
 @api_view(['POST'])
 def post_bus_comment(request, *args, **kwargs):
@@ -337,7 +334,6 @@ def post_bus_comment(request, *args, **kwargs):
     
     return Response(serializer.data, status=status.HTTP_201_CREATED)
 
-
 @api_view(['GET'])
 def get_bus_comment_list(request):
     comments = CommentBus.objects.all()
@@ -345,7 +341,6 @@ def get_bus_comment_list(request):
     serializer = CommentBusSerializer(comments, many=True) 
 
     return Response(serializer.data)
-
 
 @api_view(['DELETE'])
 def delete_bus_comment(request, comment_id):
@@ -356,10 +351,6 @@ def delete_bus_comment(request, comment_id):
     
     comment.delete()
     return Response({"message": "Le commentaire de cette bus a été supprimé avec succès."}, status=status.HTTP_204_NO_CONTENT)
-
-
-
-
 
 class TransportSearchView(generics.ListAPIView):
     serializer_class_map = {

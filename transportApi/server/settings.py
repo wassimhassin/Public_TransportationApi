@@ -46,7 +46,7 @@ INSTALLED_APPS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
+    "http://localhost:5173",
 ]
 
 CORS_ALLOW_METHODS = [
@@ -106,7 +106,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'transportapi',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'Wassim19201920**',
         'HOST': 'localhost', 
         'PORT': '3306',       
     }
