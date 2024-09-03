@@ -1,7 +1,7 @@
 .featured{
   margin-top: 100px;
   width: 100%;
-  max-width: 800px;
+  max-width: 800px; 
   display: grid;
   grid-template-columns: 1;
   gap: 30px;
